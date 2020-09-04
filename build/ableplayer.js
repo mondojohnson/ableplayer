@@ -10127,15 +10127,15 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 			else { // no property was specified, update all styles with current saved prefs
 				opacity = parseFloat(this.prefCaptionsOpacity) / 100.0;
 				$element.css({
-					'font-family': this.prefCaptionsFont,
-					'color': this.prefCaptionsColor,
-					'background-color': this.prefCaptionsBGColor,
+					'font-family': 'arial,helvetica,sans-serif', //this.prefCaptionsFont,
+					'color': '#fff',//this.prefCaptionsColor,
+					'background-color': 'rgba(0,0,0.0.3)',//this.prefCaptionsBGColor,
 					'opacity': opacity
 				});
 				if ($element === this.$captionsDiv) {
 					if (typeof this.$captionsWrapper !== 'undefined') {
 						this.$captionsWrapper.css({
-  						'font-size': this.prefCaptionsSize
+  						'font-size': '150%';//this.prefCaptionsSize
             });
 					}
 				}
@@ -10167,7 +10167,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 		// if position parameter was passed to this function, use that
 		// otherwise use user preference
 		if (typeof position === 'undefined') {
-			position = this.prefCaptionsPosition;
+			position = 'overlay';//this.prefCaptionsPosition;
 		}
 		if (typeof this.$captionsWrapper !== 'undefined') {
 
